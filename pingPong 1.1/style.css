@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body{
+    background-color: rgb(30,30,30);
+}
+section{
+    margin-top: 3%;
+    width: 100%;
+    height: 600px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+#campo{
+    height: 85%;
+    width: 80%;
+    border: 5px solid black;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(46, 59, 46);
+}
+.barra{
+    width: 20px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: bisque;
+    position: absolute;
+    z-index: 102;
+}
+#jogador{
+    top: 175px;
+    left: 10px;
+}
+#cpu{
+    top: 175px;
+    right: 10px;
+}
+#bola{
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: aliceblue;
+    position: absolute;
+    top: 240px;
+    left: 49%;
+    z-index: 110;
+}
+nav{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+#time{
+    position: absolute;
+    z-index: 99;
+    top: 2px;
+    text-align: center;
+    width: 70px;
+    height: 20px;
+    background-color: black;
+    border: 2px solid gray;
+    color: greenyellow;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#eft{
+    position: absolute;
+    background-color: rgba(12, 88, 252, 0.363);
+    height: 100%;
+}
+#bt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom:0px;
+    width: 70px;
+    height: 30px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    background: linear-gradient(to bottom, rgb(0, 0, 54),rgb(16, 16, 150));
+    z-index: 101;
+}
+@keyframes eft{
+    from{width: 0%;}
+    to{width: 100%;}
+}
+#bt:hover{
+    cursor: pointer;
+}
+#restart:hover{
+    cursor: pointer;
+}
+#restart{
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    left: 47%;
+    width: 70px;
+    height: 30px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    background: linear-gradient(to bottom, rgb(0, 0, 54),rgb(16, 16, 150));
+    z-index: 121;
+}
+div ~ input{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 2%;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+}
+#pontosJogador{
+    left: 20%;
+}
+#pontosCpu{
+    right: 20%;
+}
+#linha{
+    position: absolute;
+    left: 50%;
+    border: 1px solid white;
+    height: 100%;
+}
+p{
+    position: absolute;
+    bottom: 2px;
+    right: 50px;
+}
+.canto{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+#canto1{
+    left: -3%;
+    top:-6%
+}
+#canto2{
+    right: -3%;
+    top: -6%;
+}
+#canto3{
+    left: -3%;
+    bottom: -6%;
+}
+#canto4{
+    right: -3%;
+    bottom: -6%;
+}
+#areaMeio{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -64px;
+    margin-left: -1px;
+    z-index: 100;
+}
+#meio{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+#vitoria{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:url(vitoria.gif) no-repeat 50% 5%;
+    z-index: 120;
+    background-size: 50%;
+    animation: fim ease-out 2s;
+}
+#derrota{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:url(derrota.gif) no-repeat 50% 5%;
+    background-size: 50%;
+    z-index: 120;
+    animation: fim ease-out 2s;
+}
+#empate{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:url(empate.gif) no-repeat 50% 5%;
+    background-size: 45%;
+    z-index: 120;
+    animation: fim ease-out 2s;
+}
+@keyframes fim{
+    from{width: 0%;height: 0%;}
+    to{width: 100%;height: 100%;}
+}
